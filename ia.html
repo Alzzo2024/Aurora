@@ -19,7 +19,7 @@
         </div>
         <div class="profile-menu hidden" id="profile-menu">
           <a href="#">Ver Perfil</a>
-          <a href="#">Editar Perfil</a>
+          <a href="#">Edictar Perfil</a>
           <a href="#">Configurações</a>
           <a href="index.html">Sair</a>
         </div>
@@ -183,17 +183,17 @@
 
           // Palavras-chave para respostas
           if (userMessage.includes('olá') || userMessage.includes('oi')) {
-            aiReply = 'Olá! Como posso te ajudar hoje?';
+            aiReply = 'Olá! Como posso ajudar?';
           } else if (userMessage.includes('obrigado')) {
             aiReply = 'De nada! 😄';
           } else if (userMessage.includes('emoji')) {
-            aiReply = 'Você gosta de emojis? 🥳';
+            aiReply = 'Vós gostais de emojis? 🥳';
           } else if (userMessage.includes('🐶')) {
-            aiReply = 'Cachorrinhos são tão fofos!';
+            aiReply = 'Cães são tão fofos!';
           } else if (userMessage.includes('🍕')) {
-            aiReply = 'Pizza é sempre uma boa ideia! 🍕';
+            aiReply = 'Pizza é sempre uma óptima ideia! 🍕';
           } else {
-            aiReply = 'Não entendi, mas posso aprender com você!';
+            aiReply = 'Não entendi, mas posso apprender convosco!';
           }
 
           aiMessageDiv.textContent = aiReply;
