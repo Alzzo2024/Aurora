@@ -1,5 +1,4 @@
-
-  /* Estilo geral */
+/* Estilo geral */
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
@@ -59,12 +58,15 @@ body {
 }
 
 .btn-login, .btn-demo {
+    display: inline-block;
     background-color: transparent;
     border: 2px solid white;
     color: white;
     padding: 10px 20px;
     border-radius: 50px;
     font-size: 1em;
+    text-align: center;
+    text-decoration: none; /* Remove o sublinhado do link */
     margin-left: 15px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -217,6 +219,7 @@ body {
     padding: 20px 0;
     text-align: center;
     color: #d3b3ff;
+    position: relative;
 }
 
 .footer-content {
@@ -247,50 +250,113 @@ body {
 
 .footer-bottom {
     margin-top: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Estilos para telas pequenas (ex: smartphones) */
+.btn-donate {
+    display: inline-block;
+    background-color: #f3c33a; /* Amarelo suave */
+    border: 2px solid #f3c33a;
+    color: #1b0033; /* Cor do texto */
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-size: 1em;
+    text-align: center;
+    text-decoration: none; /* Remove o sublinhado do link */
+    margin-left: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 10px rgba(243, 195, 58, 0.3); /* Sombra leve */
+}
+
+.btn-donate:hover {
+    background-color: #e0b723; /* Amarelo mais escuro para hover */
+    color: #fff;
+    box-shadow: 0 0 15px rgba(243, 195, 58, 0.5); /* Sombra mais forte */
+}
+
+/* Media Queries para Dispositivos Móveis */
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    padding: 10px 0;
-  }
+    .navbar {
+        top: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
 
-  .menu {
-    flex-direction: column;
-    padding: 0;
-  }
+    .menu {
+        flex-direction: column;
+        background-color: transparent;
+        padding: 10px;
+    }
 
-  .menu li {
-    margin: 10px 0;
-  }
+    .menu li {
+        margin: 5px 0;
+    }
 
-  .buttons {
-    position: static;
-    margin-top: 20px;
-  }
+    .buttons {
+        position: static;
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
 
-  .logo {
-    width: 250px;
-  }
+    .btn-login, .btn-demo {
+        margin: 10px 0;
+    }
 
-  .features-section {
-    flex-direction: column;
-    padding: 20px;
-  }
+    .logo {
+        width: 300px;
+    }
 
-  .feature-box {
-    width: 100%;
-  }
+    .feature-box {
+        width: 100%;
+        max-width: 500px;
+    }
 
-  .message-box {
-    flex-direction: column;
-    width: 100%;
-  }
+    .message-box {
+        width: 90%;
+        max-width: 500px;
+    }
+}
 
-  .message-send-btn {
-    margin-left: 0;
-    margin-top: 15px;
-    width: 100%;
-  }
+@media (max-width: 480px) {
+    .logo {
+        width: 200px;
+    }
+
+    .feature-icon {
+        font-size: 1.5em;
+    }
+
+    .feature-content h3 {
+        font-size: 1em;
+    }
+
+    .feature-content p {
+        font-size: 0.8em;
+    }
+
+    .message-input {
+        font-size: 1em;
+    }
+
+    .message-send-btn {
+        font-size: 1em;
+        padding: 10px 15px;
+    }
+
+    .send-icon {
+        width: 15px;
+    }
+
+    .footer-logo-img {
+        width: 60px;
+    }
+
+    .social-links img {
+        width: 20px;
+    }
 }
