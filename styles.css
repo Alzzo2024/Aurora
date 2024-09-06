@@ -1,0 +1,250 @@
+/* Estilo geral */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #1b0033;
+    color: white;
+    height: 100vh;
+    overflow-x: hidden;
+  }
+  
+  .background {
+    background-image: url('background.gif'); /* Coloque o link do GIF aqui */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+  }
+  
+  .navbar {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+  }
+  
+  .menu li {
+    margin: 0 20px;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    transition: color 0.3s;
+  }
+  
+  .menu a:hover {
+    color: #d3b3ff;
+  }
+  
+  .buttons {
+    position: absolute;
+    right: 50px;
+  }
+  
+  .btn-login, .btn-demo {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 1em;
+    margin-left: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-login:hover, .btn-demo:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .logo-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 400px;
+    opacity: 0;
+    animation: logoAnimation 2s ease-out forwards;
+  }
+  
+  @keyframes logoAnimation {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Seção de caixinhas */
+  .features-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px;
+    background-color: #1b0033;
+  }
+  
+  .feature-box {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 15px;
+    width: 300px;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+  
+  .feature-box:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .feature-icon {
+    font-size: 2em;
+    margin-right: 15px;
+  }
+  
+  .feature-content h3 {
+    margin: 0;
+    font-size: 1.4em;
+    color: #d3b3ff;
+  }
+  
+  .feature-content p {
+    margin: 5px 0 0 0;
+    font-size: 1em;
+    color: #e0d1f5;
+  }
+  
+  /* Seção de mensagem aprimorada */
+.message-section {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    background-color: #1b0033; /* Mantém a cor de fundo */
+  }
+  
+  .message-box {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0 0 15px rgba(211, 179, 255, 0.3); /* Sombra suave */
+    transition: box-shadow 0.3s;
+  }
+  
+  .message-box:hover {
+    box-shadow: 0 0 20px rgba(211, 179, 255, 0.5); /* Efeito ao passar o mouse */
+  }
+  
+  .message-input {
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 15px;
+    font-size: 1.2em;
+    border-radius: 15px;
+  }
+  
+  .message-input::placeholder {
+    color: #d3b3ff;
+  }
+  
+  .message-send-btn {
+    display: flex;
+    align-items: center;
+    background-color: #d3b3ff;
+    border: none;
+    color: #1b0033;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-left: 20px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 10px rgba(211, 179, 255, 0.3); /* Sombra suave no botão */
+  }
+  
+  .message-send-btn:hover {
+    background-color: #b287ff;
+    box-shadow: 0 0 15px rgba(211, 179, 255, 0.6); /* Efeito ao passar o mouse */
+  }
+  
+  .message-send-btn span {
+    margin-right: 10px;
+  }
+  
+  .send-icon {
+    width: 20px;
+    filter: invert(1); /* Torna o ícone branco */
+  }  
+  
+  /* Rodapé */
+  .footer {
+    background-color: #140026;
+    padding: 20px 0;
+    text-align: center;
+    color: #d3b3ff;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+  }
+  
+  .footer-logo-img {
+    width: 80px;
+    margin-right: 20px;
+  }
+  
+  .social-links a {
+    margin: 0 10px;
+    display: inline-block;
+  }
+  
+  .social-links img {
+    width: 30px;
+    transition: transform 0.3s;
+  }
+  
+  .social-links a:hover img {
+    transform: scale(1.2);
+  }
+  
+  .footer-bottom {
+    margin-top: 10px;
+  }
+  
