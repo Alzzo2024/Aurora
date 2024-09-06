@@ -320,6 +320,18 @@ body {
         width: 90%;
         max-width: 500px;
     }
+
+    .btn-donate {
+        margin: 10px 0; /* Ajusta a margem do botão de doar para móveis */
+        position: relative; /* Permite o posicionamento relativo para ajustes */
+        left: -10px; /* Move o botão para a esquerda */
+    }
+
+    .message-send-btn {
+        margin-left: 10px; /* Ajusta a margem do botão de enviar para móveis */
+        position: relative; /* Permite o posicionamento relativo para ajustes */
+        left: -10px; /* Move o botão para a esquerda */
+    }
 }
 
 @media (max-width: 480px) {
