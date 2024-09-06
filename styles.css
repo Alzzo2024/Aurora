@@ -55,6 +55,8 @@ body {
 .buttons {
     position: absolute;
     right: 50px;
+    display: flex;
+    align-items: center;
 }
 
 .btn-login, .btn-demo {
@@ -322,15 +324,16 @@ body {
     }
 
     .btn-donate {
-        margin: 10px 0; /* Ajusta a margem do botão de doar para móveis */
-        position: relative; /* Permite o posicionamento relativo para ajustes */
-        left: -10px; /* Move o botão para a esquerda */
+        margin-left: 0; /* Remove a margem esquerda em dispositivos móveis */
+        margin-top: 10px; /* Adiciona margem superior para espaçamento */
+        position: relative;
+        left: 0; /* Garante que o botão esteja no centro */
     }
 
     .message-send-btn {
-        margin-left: 10px; /* Ajusta a margem do botão de enviar para móveis */
-        position: relative; /* Permite o posicionamento relativo para ajustes */
-        left: -10px; /* Move o botão para a esquerda */
+        margin-left: 0; /* Remove a margem esquerda para dispositivos móveis */
+        position: relative;
+        left: 0; /* Garante que o botão esteja alinhado */
     }
 }
 
@@ -370,5 +373,18 @@ body {
 
     .social-links img {
         width: 20px;
+    }
+
+    .btn-donate {
+        margin-left: 0; /* Remove a margem esquerda em dispositivos móveis pequenos */
+        margin-top: 10px; /* Adiciona margem superior para espaçamento */
+        position: relative;
+        left: 0; /* Garante que o botão esteja no centro */
+    }
+
+    .message-send-btn {
+        margin-left: 0; /* Remove a margem esquerda para dispositivos móveis pequenos */
+        position: relative;
+        left: 0; /* Garante que o botão esteja alinhado */
     }
 }
