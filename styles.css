@@ -165,6 +165,7 @@ body {
     max-width: 800px;
     box-shadow: 0 0 15px rgba(211, 179, 255, 0.3); 
     transition: box-shadow 0.3s;
+    position: relative; /* Posiciona o botão dentro da caixa */
 }
 
 .message-box:hover {
@@ -180,6 +181,7 @@ body {
     padding: 15px;
     font-size: 1.2em;
     border-radius: 15px;
+    margin-right: 10px; /* Adiciona margem à direita para espaço com o botão */
 }
 
 .message-input::placeholder {
@@ -187,7 +189,7 @@ body {
 }
 
 .message-send-btn {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     background-color: #d3b3ff;
     border: none;
@@ -196,9 +198,10 @@ body {
     border-radius: 50px;
     font-size: 1.2em;
     cursor: pointer;
-    margin-left: 20px;
     transition: background-color 0.3s, box-shadow 0.3s;
     box-shadow: 0 0 10px rgba(211, 179, 255, 0.3); 
+    position: absolute; /* Posiciona o botão dentro da caixa */
+    right: 20px; /* Alinha o botão à direita dentro da caixa */
 }
 
 .message-send-btn:hover {
@@ -321,19 +324,15 @@ body {
     .message-box {
         width: 90%;
         max-width: 500px;
-    }
-
-    .btn-donate {
-        margin-left: 0; /* Remove a margem esquerda em dispositivos móveis */
-        margin-top: 10px; /* Adiciona margem superior para espaçamento */
-        position: relative;
-        left: 0; /* Garante que o botão esteja no centro */
+        padding: 15px;
     }
 
     .message-send-btn {
-        margin-left: 0; /* Remove a margem esquerda para dispositivos móveis */
-        position: relative;
-        left: 0; /* Garante que o botão esteja alinhado */
+        margin-left: 0; /* Remove a margem esquerda */
+        right: 10px; /* Ajusta a posição à direita */
+        top: 50%; /* Centraliza verticalmente */
+        transform: translateY(-50%); /* Ajusta o alinhamento vertical */
+        position: absolute; /* Posiciona o botão dentro da caixa */
     }
 }
 
@@ -356,11 +355,15 @@ body {
 
     .message-input {
         font-size: 1em;
+        margin-right: 10px; /* Margem para o espaço com o botão */
     }
 
     .message-send-btn {
         font-size: 1em;
         padding: 10px 15px;
+        right: 10px; /* Ajusta a posição à direita */
+        top: 50%; /* Centraliza verticalmente */
+        transform: translateY(-50%); /* Ajusta o alinhamento vertical */
     }
 
     .send-icon {
@@ -373,18 +376,5 @@ body {
 
     .social-links img {
         width: 20px;
-    }
-
-    .btn-donate {
-        margin-left: 0; /* Remove a margem esquerda em dispositivos móveis pequenos */
-        margin-top: 10px; /* Adiciona margem superior para espaçamento */
-        position: relative;
-        left: 0; /* Garante que o botão esteja no centro */
-    }
-
-    .message-send-btn {
-        margin-left: 0; /* Remove a margem esquerda para dispositivos móveis pequenos */
-        position: relative;
-        left: 0; /* Garante que o botão esteja alinhado */
     }
 }
