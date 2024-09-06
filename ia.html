@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IA - Ametysta</title>
+  <link rel="stylesheet" href="ia.css">
+  <link rel="icon" href="Ametysta_logo_simple.png" type="image/png">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <img src="Ametysta_logo_simple.png" alt="Ícone IA" class="ia-icon">
+      <div class="profile-box">
+        <img src="Ametysta_logo_simple.png" alt="Perfil" class="profile-icon" id="profile-icon">
+        <div class="profile-info">
+          <p>User_Teste</p>
+          <p>#0000</p>
+        </div>
+        <div class="profile-menu hidden" id="profile-menu">
+          <a href="#">Ver Perfil</a>
+          <a href="#">Editar Perfil</a>
+          <a href="#">Configurações</a>
+          <a href="index.html">Sair</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="chat-container">
+      <div class="message-list" id="message-list">
+        <!-- Mensagens vão aqui -->
+      </div>
+      <div class="typing-indicator hidden" id="typing-indicator">A IA está digitando...</div>
+      <div class="message-input-container">
+        <button class="emoji-btn" id="emoji-btn">
+          <img src="sendemoji.png" alt="Emoji" class="icon-img">
+        </button>
+        <input type="file" id="image-input" class="hidden" accept="image/*">
+        <button class="image-btn" id="image-btn">
+          <img src="sendimage.png" alt="Imagem" class="icon-img">
+        </button>
+        <input type="file" id="audio-input" class="hidden" accept="audio/*">
+        <button class="voice-btn" id="voice-btn">
+          <img src="sendvoice.png" alt="Voz" class="icon-img">
+        </button>
+        <input type="text" class="message-input" placeholder="Digite sua mensagem..." id="message-input">
+        <button class="send-btn" id="send-btn">Enviar</button>
+      </div>
+      <div class="emoji-picker hidden" id="emoji-picker">
+        <div class="emoji-category">
+          <h4>Carinhas</h4>
+          <div class="emoji-list">
+            <span>😀</span><span>😃</span><span>😄</span><span>😁</span><span>😆</span>
+            <span>😅</span><span>😂</span><span>🤣</span><span>😊</span><span>😇</span>
+            <span>🙂</span><span>🙃</span><span>😉</span><span>😌</span><span>😍</span>
+            <span>🥰</span><span>😘</span><span>😗</span><span>😙</span><span>😚</span>
+            <span>😋</span><span>😛</span><span>😝</span><span>😜</span><span>🤪</span>
+            <span>🤨</span><span>🧐</span><span>🤓</span><span>😎</span><span>🤩</span>
+            <span>🥳</span><span>😏</span><span>😒</span><span>😞</span><span>😔</span>
+            <span>😟</span><span>😕</span><span>🙁</span><span>☹️</span><span>😣</span>
+            <span>😖</span><span>😫</span><span>😩</span><span>🥺</span><span>😢</span>
+            <span>😭</span><span>😤</span><span>😠</span><span>😡</span><span>🤬</span>
+            <span>🤯</span><span>😳</span><span>🥵</span><span>🥶</span><span>😱</span>
+            <span>😨</span><span>😰</span><span>😓</span><span>💩</span><span>🤡</span>
+            <span>🤠</span>
+          </div>
+        </div>
+        <div class="emoji-category">
+          <h4>Animais</h4>
+          <div class="emoji-list">
+            <span>🐶</span><span>🐱</span><span>🐭</span><span>🐹</span><span>🐰</span>
+            <span>🦊</span><span>🐸</span><span>🦄</span><span>🐍</span><span>🦁</span>
+            <span>🐵</span><span>🐔</span><span>🦅</span><span>🐙</span><span>🦋</span>
+            <span>🦆</span><span>🐬</span><span>🦧</span><span>🐫</span><span>🐪</span>
+            <span>🐘</span><span>🦓</span><span>🦒</span><span>🦧</span><span>🦛</span>
+          </div>
+        </div>
+        <div class="emoji-category">
+          <h4>Comida</h4>
+          <div class="emoji-list">
+            <span>🍎</span><span>🍌</span><span>🍉</span><span>🍔</span><span>🍕</span>
+            <span>🍟</span><span>🍣</span><span>🍰</span><span>🍜</span><span>🍭</span>
+            <span>🍫</span><span>🍩</span><span>🍪</span><span>🍨</span><span>🥥</span>
+            <span>🌭</span><span>🍿</span><span>🧈</span><span>🍿</span><span>🍆</span>
+            <span>🥥</span><span>🍅</span><span>🥑</span><span>🍒</span><span>🍍</span>
+          </div>
+        </div>
+        <div class="emoji-category">
+          <h4>Esportes</h4>
+          <div class="emoji-list">
+            <span>⚽</span><span>🏀</span><span>🏈</span><span>⚾</span><span>🎾</span>
+            <span>🏐</span><span>🏓</span><span>🥊</span><span>🏋️‍♂️</span>
+            <span>⛹️‍♂️</span><span>🏌️‍♂️</span><span>🏇</span><span>🎣</span>
+            <span>🏌️‍♀️</span><span>🏌️</span><span>🧗‍♂️</span><span>🚵‍♂️</span>
+            <span>🚴‍♀️</span><span>🤺</span>
+          </div>
+        </div>
+        <div class="emoji-category">
+          <h4>Objetos</h4>
+          <div class="emoji-list">
+            <span>📱</span><span>💻</span><span>⌚</span><span>🖨️</span><span>💡</span>
+            <span>🔑</span><span>🔒</span><span>📦</span><span>🎁</span><span>📚</span>
+            <span>🖋️</span><span>✒️</span><span>🖊️</span><span>🖌️</span><span>🖍️</span>
+            <span>📝</span><span>📊</span><span>📈</span><span>📉</span><span>📏</span>
+            <span>📐</span><span>🧮</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Manipulação do perfil
+    document.getElementById('profile-icon').addEventListener('click', function() {
+      document.getElementById('profile-menu').classList.toggle('hidden');
+    });
+
+    // Manipulação dos emojis
+    document.getElementById('emoji-btn').addEventListener('click', function() {
+      document.getElementById('emoji-picker').classList.toggle('hidden');
+    });
+
+    document.querySelectorAll('.emoji-picker span').forEach(emoji => {
+      emoji.addEventListener('click', function() {
+        const emojiChar = this.textContent;
+        const messageInput = document.getElementById('message-input');
+        messageInput.value += emojiChar; // Adiciona o emoji ao final do texto atual
+        document.getElementById('emoji-picker').classList.add('hidden'); // Fecha o seletor de emojis após a seleção
+      });
+    });
+
+    // Manipulação da seleção de imagem
+    document.getElementById('image-btn').addEventListener('click', function() {
+      document.getElementById('image-input').click(); // Aciona o seletor de arquivos
+    });
+
+    // Manipulação da seleção de áudio
+    document.getElementById('voice-btn').addEventListener('click', function() {
+      document.getElementById('audio-input').click(); // Aciona o seletor de arquivos de áudio
+    });
+
+    // Envio de mensagens, imagens e áudio
+    document.getElementById('send-btn').addEventListener('click', function() {
+      const messageInput = document.getElementById('message-input');
+      const messageList = document.getElementById('message-list');
+      const userMessage = messageInput.value.trim();
+      
+      if (userMessage || document.getElementById('image-input').files.length > 0) {
+        // Adicionar mensagem do usuário
+        const userMessageDiv = document.createElement('div');
+        userMessageDiv.className = 'message';
+        userMessageDiv.textContent = userMessage;
+        messageList.appendChild(userMessageDiv);
+
+        // Adicionar imagens, se houver
+        const imageFile = document.getElementById('image-input').files[0];
+        if (imageFile) {
+          const reader = new FileReader();
+          reader.onload = function(e) {
+            const imgElement = document.createElement('img');
+            imgElement.src = e.target.result;
+            imgElement.alt = 'Imagem enviada';
+            imgElement.className = 'sent-image'; // Adicione uma classe para estilizar as imagens
+            messageList.appendChild(imgElement);
+          };
+          reader.readAsDataURL(imageFile);
+          document.getElementById('image-input').value = ''; // Limpa o input de imagem
+        }
+
+        // Mostrar reticências enquanto a IA "digita"
+        document.getElementById('typing-indicator').classList.remove('hidden');
+
+        // Simular atraso na resposta da IA
+        setTimeout(() => {
+          document.getElementById('typing-indicator').classList.add('hidden'); // Oculta reticências
+
+          // Resposta da IA
+          const aiMessageDiv = document.createElement('div');
+          aiMessageDiv.className = 'message';
+          let aiReply = '';
+
+          // Palavras-chave para respostas
+          if (userMessage.includes('olá') || userMessage.includes('oi')) {
+            aiReply = 'Olá! Como posso te ajudar hoje?';
+          } else if (userMessage.includes('obrigado')) {
+            aiReply = 'De nada! 😄';
+          } else if (userMessage.includes('emoji')) {
+            aiReply = 'Você gosta de emojis? 🥳';
+          } else if (userMessage.includes('🐶')) {
+            aiReply = 'Cachorrinhos são tão fofos!';
+          } else if (userMessage.includes('🍕')) {
+            aiReply = 'Pizza é sempre uma boa ideia! 🍕';
+          } else {
+            aiReply = 'Não entendi, mas posso aprender com você!';
+          }
+
+          aiMessageDiv.textContent = aiReply;
+          messageList.appendChild(aiMessageDiv);
+
+          // Limpa o campo de entrada
+          messageInput.value = '';
+        }, 2000); // Atraso de 2 segundos
+      }
+    });
+  </script>
+</body>
+</html>
