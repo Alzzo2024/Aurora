@@ -17,7 +17,14 @@ document.addEventListener('DOMContentLoaded', () => {
         downloadsCountElem.textContent = downloadsCount;
 
         // Inicia o download e redireciona para o arquivo
-        const downloadUrl = 'https://storage.googleapis.com/appilder/app/efb2d658839ae545ba85a93a515f2d89/fe0e6b315d91c71dae0244d3163c96fa.apk?GoogleAccessId=desktopapi%40appilder-com.iam.gserviceaccount.com&Expires=1726620991&Signature=JC4ci4KPfUtLRoBM0csdS0aYjmG8iaDhTwoZ%2FZd%2FyWjDjzsUvqLAChuTcwtYuJaarM6AMQXqKshl7%2FW49EB0BXoMgQL9Ce5oZHuiV1JE4z%2BaY7KCdjxQFqokiPcgGks34SzfIwC9d4BPRKoFzC0phGLKlom289kt0144g5QijFjzlEEi7yAGc5YFYp1kBLJ4ak6BP7I9psE5g87I9jtvEnlzqHp4rDE%2BjqepazJcGKTvFyU8UuFtQ%2BXOxfwnvajmkqe8LksPaZbcxQDDL1olTuZ2F%2BrI1MCIrwQCTNjUIDlGJv6XvdiewnEroQhPF1irrGhZj%2B0bwVSUmmUj3%2BpOsQ%3D%3D'; // Substitua pela URL do arquivo que você deseja que seja baixado
-        window.location.href = downloadUrl;
+        const downloadUrl = 'https://storage.googleapis.com/appilder/app/efb2d658839ae545ba85a93a515f2d89/fe0e6b315d91c71dae0244d3163c96fa.apk?GoogleAccessId=desktopapi%40appilder-com.iam.gserviceaccount.com&Expires=1726620991&Signature=JC4ci4KPfUtLRoBM0csdS0aYjmG8iaDhTwoZ%2FZd%2FyWjDjzsUvqLAChuTcwtYuJaarM6AMQXqKshl7%2FW49EB0BXoMgQL9Ce5oZHuiV1JE4z%2BaY7KCdjxQFqokiPcgGks34SzfIwC9d4BPRKoFzC0phGLKlom289kt0144g5QijFjzlEEi7yAGc5YFYp1kBLJ4ak6BP7I9psE5g87I9jtvEnlzqHp4rDE%2BjqepazJcGKTvFyU8UuFtQ%2BXOxfwnvajmkqe8LksPaZbcxQDDL1olTuZ2F%2BrI1MCIrwQCTNjUIDlGJv6XvdiewnEroQhPF1irrGhZj%2B0bwVSUmmUj3%2BpOsQ%3D%3D'; // URL do arquivo APK
+
+        // Cria um elemento de link temporário para iniciar o download
+        const tempLink = document.createElement('a');
+        tempLink.href = downloadUrl;
+        tempLink.download = 'AmetystaApp.apk'; // Nome sugerido para o arquivo baixado
+        document.body.appendChild(tempLink);
+        tempLink.click();
+        document.body.removeChild(tempLink);
     });
 });
