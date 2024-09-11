@@ -1,0 +1,360 @@
+/* Estilo geral */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #1b0033;
+    color: white;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.background {
+    background-image: url('background.gif'); /* Coloque o link do GIF aqui */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.alert-bar {
+    background-color: #ff4c4c;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2em;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar {
+    position: absolute;
+    top: 60px; /* Ajustado para deixar espaço para a barra de aviso */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+}
+
+.menu li {
+    margin: 0 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #d3b3ff;
+}
+
+.buttons {
+    position: absolute;
+    right: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.btn-demo {
+    display: inline-block;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 1em;
+    text-align: center;
+    text-decoration: none; /* Remove o sublinhado do link */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-demo:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.logo-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 400px;
+    opacity: 0;
+    animation: logoAnimation 2s ease-out forwards;
+}
+
+@keyframes logoAnimation {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Seção de downloads */
+.downloads-section {
+    position: relative;
+    padding: 50px;
+    background-color: #1b0033;
+}
+
+.downloads-counter-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    background: linear-gradient(145deg, #1b0033, #2a003d);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.downloads-counter {
+    color: #d3b3ff;
+}
+
+.downloads-counter p {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.downloads-count-wrapper {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #d3b3ff;
+    color: #1b0033;
+    border-radius: 50px;
+    font-size: 2em;
+    font-weight: bold;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.downloads-count-wrapper:hover {
+    background-color: #b090f7;
+    transform: scale(1.05);
+}
+
+/* Seção de caixinhas */
+.features-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px;
+    background-color: #1b0033;
+    position: relative;
+    z-index: 1;
+}
+
+.feature-box {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 15px;
+    width: 300px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.feature-box:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.feature-icon {
+    font-size: 2em;
+    margin-right: 15px;
+}
+
+.feature-content h3 {
+    margin: 0;
+    font-size: 1.4em;
+    color: #d3b3ff;
+}
+
+.feature-content p {
+    margin: 5px 0 0 0;
+    font-size: 1em;
+    color: #e0d1f5;
+}
+
+/* Rodapé */
+.footer {
+    background-color: #140026;
+    padding: 20px 0;
+    text-align: center;
+    color: #d3b3ff;
+    position: relative;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.footer-logo-img {
+    width: 80px;
+    margin-right: 20px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-links img {
+    width: 30px;
+    transition: transform 0.3s;
+}
+
+.social-links a:hover img {
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    margin-top: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-donate {
+    display: inline-block;
+    background-color: #f3c33a; /* Amarelo suave */
+    border: 2px solid #f3c33a;
+    color: #1b0033; /* Cor do texto */
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-size: 1em;
+    text-align: center;
+    text-decoration: none; /* Remove o sublinhado do link */
+    margin-left: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 10px rgba(243, 195, 58, 0.3); /* Sombra leve */
+}
+
+.btn-donate:hover {
+    background-color: #e0b723; /* Amarelo mais escuro para hover */
+    color: #fff;
+    box-shadow: 0 0 15px rgba(243, 195, 58, 0.5); /* Sombra mais forte */
+}
+
+/* Media Queries para Dispositivos Móveis */
+@media (max-width: 768px) {
+    .navbar {
+        top: 80px; /* Ajustado para deixar espaço para a barra de aviso */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu {
+        flex-direction: column;
+        background-color: transparent;
+        padding: 10px;
+    }
+
+    .menu li {
+        margin: 5px 0;
+    }
+
+    .buttons {
+        position: static;
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-demo {
+        margin: 10px 0;
+    }
+
+    .logo {
+        width: 300px;
+    }
+
+    .downloads-section {
+        padding: 20px;
+    }
+
+    .downloads-counter-container {
+        width: 90%;
+        padding: 15px;
+        font-size: 1em;
+    }
+
+    .downloads-count-wrapper {
+        font-size: 1.5em;
+    }
+
+    .feature-box {
+        width: 100%;
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 200px;
+    }
+
+    .feature-icon {
+        font-size: 1.5em;
+    }
+
+    .feature-content h3 {
+        font-size: 1em;
+    }
+
+    .feature-content p {
+        font-size: 0.8em;
+    }
+
+    .downloads-counter p {
+        font-size: 0.8em;
+    }
+
+    .downloads-count-wrapper {
+        font-size: 1.2em;
+    }
+
+    .footer-logo-img {
+        width: 60px;
+    }
+
+    .social-links img {
+        width: 20px;
+    }
+}
