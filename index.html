@@ -3,106 +3,113 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ametysta</title>
+  <title>Aurora</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="Ametysta_logo_simple.png" type="image/png">
+  <link rel="icon" href="AuroraLogo.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-  <div class="background">
-    <div id="Inicio" class="navbar">
-      <ul class="menu">
-        <li><a href="#Inicio">⛪ Início</a></li>
-        <li><a href="#Recursos">🕊️ Recursos</a></li>
-        <li><a href="#IA">👾 IA</a></li>
-        <li><a href="#Supporte">👥 Supporte</a></li>
-      </ul>
-      <div class="buttons">
-        <a href="https://storage.googleapis.com/appilder/app/efb2d658839ae545ba85a93a515f2d89/fe0e6b315d91c71dae0244d3163c96fa.apk?GoogleAccessId=desktopapi%40appilder-com.iam.gserviceaccount.com&Expires=1726620991&Signature=JC4ci4KPfUtLRoBM0csdS0aYjmG8iaDhTwoZ%2FZd%2FyWjDjzsUvqLAChuTcwtYuJaarM6AMQXqKshl7%2FW49EB0BXoMgQL9Ce5oZHuiV1JE4z%2BaY7KCdjxQFqokiPcgGks34SzfIwC9d4BPRKoFzC0phGLKlom289kt0144g5QijFjzlEEi7yAGc5YFYp1kBLJ4ak6BP7I9psE5g87I9jtvEnlzqHp4rDE%2BjqepazJcGKTvFyU8UuFtQ%2BXOxfwnvajmkqe8LksPaZbcxQDDL1olTuZ2F%2BrI1MCIrwQCTNjUIDlGJv6XvdiewnEroQhPF1irrGhZj%2B0bwVSUmmUj3%2BpOsQ%3D%3D" class="btn-demo" id="downloadBtn">Demo</a>
+<body class="theme-light">
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo-nav">
+        <img src="AuroraLogo.png" alt="Logo Aurora" class="nav-logo">
+        <ul class="menu">
+          <li><a href="#Inicio">⛪ Início</a></li>
+          <li><a href="#Recursos">🕊️ Recursos</a></li>
+          <li><a href="#SybillaIA" id="sybillaLink">👾 Sybilla IA</a></li>
+          <li><a href="#Supporte">👥 Supporte</a></li>
+        </ul>
       </div>
-    </div>
-    <div class="logo-center">
-      <img src="Ametysta_logo.png" alt="Logo Ametysta" class="logo">
-    </div>
+      <div class="buttons">
+        <select id="themeSelector" class="theme-selector">
+          <option value="light">Thema Claro</option>
+          <option value="dark">Thema Escuro</option>
+        </select>
+        <a href="#" class="btn-language">Em breve</a>
+      </div>
+    </nav>
+  </header>
+
+  <div id="sybillaAlert" class="alert-box">
+    A Sybilla IA está fora de serviço temporariamente
   </div>
 
-  <!-- Barra de Aviso -->
-  <div class="alert-bar">
-    A Ametysta IA está fora de serviço temporariamente
-  </div>
-
-  <!-- Seção de downloads -->
-  <section class="downloads-section">
-    <div class="downloads-counter-container">
-      <div class="downloads-counter">
-        <p>Downloads:</p>
-        <div class="downloads-count-wrapper">
-          <span id="downloads-count">0</span>
+  <main>
+    <section id="Inicio" class="hero">
+      <div class="ametysta-container">
+        <img src="ametystabanner.png" alt="Ametysta Banner" class="ametysta-banner">
+        <div class="ametysta-box">
+          <h2>Ametysta</h2>
+          <div class="ametysta-info">
+            <div class="download-section">
+              <a href="#" class="btn-download" id="downloadBtn">Download</a>
+              <div class="platform-indicator">
+                <i class="fab fa-android"></i>
+                <span>Android</span>
+              </div>
+            </div>
+            <div class="app-info">
+              <span id="downloads-count">0</span> Downloads ⤴
+              <span class="app-version">v0.1.0 (Alpha)</span>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+    
+    <section id="Recursos" class="features-section">
+      <h2>Recursos</h2>
+      <div class="feature-grid">
+        <div class="feature-box">
+          <span class="feature-emoji">💻</span>
+          <h3>Rapidez</h3>
+          <p>Technologias para todas as plataformas.</p>
+        </div>
+        <div class="feature-box">
+          <span class="feature-emoji">🔒</span>
+          <h3>Segurança</h3>
+          <p>Technologias seguras.</p>
+        </div>
+        <div class="feature-box">
+          <span class="feature-emoji">🎨</span>
+          <h3>Costumização</h3>
+          <p>Adapte a interface ao seu gosto.</p>
+        </div>
+        <div class="feature-box">
+          <span class="feature-emoji">💸</span>
+          <h3>Gratuidade</h3>
+          <p>Conteudos gratuitos para todos.</p>
+        </div>
+      </div>
+  </main>
 
-  <!-- Seção de caixinhas -->
-  <section id="Recursos" class="features-section">
-    <div class="feature-box">
-      <span class="feature-icon">🥂</span>
-      <div class="feature-content">
-        <h3>Communidade</h3>
-        <p>Divirta-se com seus amigos.</p>
-      </div>
-    </div>
-    <div class="feature-box">
-      <span class="feature-icon">🌸</span>
-      <div class="feature-content">
-        <h3>Lofi</h3>
-        <p>Ouça musica na nossa app.</p>
-      </div>
-    </div>
-    <div class="feature-box">
-      <span class="feature-icon">☄️</span>
-      <div class="feature-content">
-        <h3>IA</h3>
-        <p>Use a nossa intelligencia artificial.</p>
-      </div>
-    </div>
-    <div class="feature-box">
-      <span class="feature-icon">🌈</span>
-      <div class="feature-content">
-        <h3>Perfil de usuario</h3>
-        <p>Divirta-se com a nossa UI.</p>
-      </div>
-    </div>
-    <div class="feature-box">
-      <span class="feature-icon">🕊️</span>
-      <div class="feature-content">
-        <h3>Orações</h3>
-        <p>Collecções de orações para todos.</p>
-      </div>
-    </div>
-    <div class="feature-box">
-      <span class="feature-icon">🌐</span>
-      <div class="feature-content">
-        <h3>Lusophonia</h3>
-        <p>Conecte-se com o mundo lusophono.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Rodapé -->
   <footer id="Supporte" class="footer">
     <div class="footer-content">
       <div class="footer-logo">
-        <img src="Ametysta_logo_simple.png" alt="Logo Ametysta" class="footer-logo-img">
+        <img src="auroralogotext.png" alt="Logo Aurora" class="footer-logo-img">
+      </div>
+      <div class="footer-links">
+        <h3>Links</h3>
+        <ul>
+          <li><a href="https://www.instagram.com/simao_arauj0/">Creador</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h3>Contacto</h3>
+        <p>Email: simaoaraujo888@gmail.com</p>
       </div>
       <div class="social-links">
-        <a href="https://www.instagram.com/ametystapp/"><img src="insta.png" alt="Instagram"></a>
-      </div>
+        <h3>Redes Sociais</h3>
+        <a href="https://www.instagram.com/aurora.official.pt?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
     </div>
+  </div>
     <div class="footer-bottom">
-      <p>&copy; 2024 Ametysta. Todos os direitos reservados.</p>
+      <p>&copy; 2024 Aurora</p>
       <a href="https://ko-fi.com/simaoaraujo" class="btn-donate">Doar</a>
     </div>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
