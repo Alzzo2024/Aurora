@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => response.json())
         .then(data => {
             let downloads = data.record.downloads || 0;
-            downloads += 1;
+            downloads += 100;
 
             fetch('https://api.jsonbin.io/v3/b/66e7113dacd3cb34a884f597', {
                 method: 'PUT',
