@@ -6,22 +6,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const sybillaLink = document.getElementById('sybillaLink');
     const sybillaAlert = document.getElementById('sybillaAlert');
 
-    // Initialize downloads count
-    let downloads = 17000;
+    // Initialize downloads count from localStorage or default to 17000
+    let downloads = parseInt(localStorage.getItem('downloads')) || 17000;
     downloadsCountElement.textContent = downloads;
 
     // Android download button
     androidDownloadBtn.addEventListener('click', () => {
         downloads++;
         downloadsCountElement.textContent = downloads;
-        // Android download link is handled by href attribute
+        localStorage.setItem('downloads', downloads);
     });
 
     // Apple download button
     appleDownloadBtn.addEventListener('click', () => {
         downloads++;
         downloadsCountElement.textContent = downloads;
-        // iOS download link is handled by href attribute
+        localStorage.setItem('downloads', downloads);
     });
 
     // Theme selector
