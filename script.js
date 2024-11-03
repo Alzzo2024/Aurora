@@ -1,8 +1,9 @@
 // script.js
 document.addEventListener('DOMContentLoaded', function() {
   // Inicializa contagem de downloads
-  let downloadsCount = 0;
+  let downloadsCount = 100; // Coloque aqui o número de downloads anteriores
   const downloadsCounter = document.getElementById('downloads-count');
+  downloadsCounter.textContent = downloadsCount; // Exibir o número inicial de downloads
 
   // Função para incrementar contagem de downloads
   function incrementDownloads() {
