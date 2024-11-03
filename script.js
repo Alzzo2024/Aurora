@@ -1,45 +1,68 @@
-// script.js
-document.addEventListener('DOMContentLoaded', function() {
-  // Inicializa contagem de downloads
-  let downloadsCount = 100; // Coloque aqui o número de downloads anteriores
-  const downloadsCounter = document.getElementById('downloads-count');
-  downloadsCounter.textContent = downloadsCount; // Exibir o número inicial de downloads
+document.addEventListener('DOMContentLoaded', () => {
+    const downloadsCountElement = document.getElementById('downloads-count');
+    const androidDownloadBtn = document.getElementById('downloadAndroidBtn');
+    const appleDownloadBtn = document.getElementById('downloadAppleBtn');
+    const themeSelector = document.getElementById('themeSelector');
+    const sybillaLink = document.getElementById('sybillaLink');
+    const sybillaAlert = document.getElementById('sybillaAlert');
 
-  // Função para incrementar contagem de downloads
-  function incrementDownloads() {
-    downloadsCount++;
-    downloadsCounter.textContent = downloadsCount;
-  }
+    // Initialize downloads count
+    let downloads = 17000;
+    downloadsCountElement.textContent = downloads;
 
-  // Adiciona evento de clique nos botões de download
-  const androidDownloadBtn = document.getElementById('androidDownloadBtn');
-  const appleDownloadBtn = document.getElementById('appleDownloadBtn');
+    // Android download button
+    androidDownloadBtn.addEventListener('click', () => {
+        downloads++;
+        downloadsCountElement.textContent = downloads;
+        // Android download link is handled by href attribute
+    });
 
-  androidDownloadBtn.addEventListener('click', function() {
-    incrementDownloads();
-    alert('Download do Android iniciado!');
-  });
+    // Apple download button
+    appleDownloadBtn.addEventListener('click', () => {
+        downloads++;
+        downloadsCountElement.textContent = downloads;
+        // iOS download link is handled by href attribute
+    });
 
-  appleDownloadBtn.addEventListener('click', function() {
-    incrementDownloads();
-    alert('Download do Apple iniciado!');
-  });
+    // Theme selector
+    themeSelector.addEventListener('change', (event) => {
+        const selectedTheme = event.target.value;
+        document.body.className = `theme-${selectedTheme}`;
+        localStorage.setItem('theme', selectedTheme);
+    });
 
-  // Alternar tema
-  const themeSelector = document.getElementById('themeSelector');
-  const body = document.body;
-
-  themeSelector.addEventListener('change', function() {
-    if (this.value === 'dark') {
-      body.classList.remove('theme-light');
-      body.classList.add('theme-dark');
-    } else {
-      body.classList.remove('theme-dark');
-      body.classList.add('theme-light');
+    // Load saved theme
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        document.body.className = `theme-${savedTheme}`;
+        themeSelector.value = savedTheme;
     }
-  });
 
-  // Exibir alerta se Sybilla estiver fora de serviço
-  const sybillaAlert = document.getElementById('sybillaAlert');
-  sybillaAlert.style.display = 'block'; // Mostra o alerta
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Sybilla alert
+    sybillaLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        sybillaAlert.style.display = 'block';
+        setTimeout(() => {
+            sybillaAlert.style.display = 'none';
+        }, 5000);
+    });
+
+    // Adjust body padding based on header height
+    function adjustBodyPadding() {
+        const headerHeight = document.querySelector('.header').offsetHeight;
+        document.body.style.paddingTop = `${headerHeight}px`;
+    }
+
+    window.addEventListener('load', adjustBodyPadding);
+    window.addEventListener('resize', adjustBodyPadding);
 });
