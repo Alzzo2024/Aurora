@@ -114,298 +114,164 @@ body {
 .alert-box {
   background-color: #ffcccb;
   color: #d8000c;
+  padding: 1rem;
+  margin: 20px auto;
+  border-radius: 5px;
   text-align: center;
-  padding: 10px;
-  font-size: 1.2em;
-  display: none;
-  position: fixed;
-  top: 60px;
-  left: 0;
-  width: 100%;
-  z-index: 1001;
+  display: none; /* Oculta por padrão */
 }
 
 .hero {
-  height: calc(100vh - 60px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url('background.gif');
-  background-size: cover;
-  background-position: center;
-  margin-top: 60px;
+  background-color: #f0f8ff;
+  padding: 100px 20px;
+  text-align: center;
 }
 
 .ametysta-container {
-  background-color: var(--background-color);
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  max-width: 600px;
-  width: 90%;
-  margin: 0 auto;
+  max-width: 800px;
+  margin: auto;
 }
 
 .ametysta-banner {
   width: 100%;
-  height: auto;
+  border-radius: 10px;
 }
 
 .ametysta-box {
-  padding: 2rem;
-  text-align: center;
+  background-color: var(--background-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .ametysta-info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 1rem;
+  margin-top: 20px;
 }
 
 .download-section {
   display: flex;
-  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
 }
 
 .btn-download {
   background-color: var(--primary-color);
   color: white;
   padding: 10px 20px;
-  border-radius: 50px;
-  font-size: 1em;
+  border-radius: 5px;
   text-decoration: none;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
-  margin-right: 10px;
+  margin: 0 10px;
+  transition: background-color 0.3s;
 }
 
 .btn-download:hover {
   background-color: var(--secondary-color);
-  transform: translateY(-2px);
-}
-
-.platform-indicator {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--primary-color);
-  color: white;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  font-size: 0.8em;
-}
-
-.platform-indicator i {
-  font-size: 1.5em;
-  margin-bottom: 2px;
 }
 
 .app-info {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-.app-version {
+  justify-content: space-between;
+  align-items: center;
   font-size: 0.9em;
-  color: var(--text-color);
-  opacity: 0.7;
 }
 
-.features-section, .ai-section {
-  padding: 4rem 2rem;
-  text-align: center;
-  background-color: var(--background-color);
+.features-section {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
 }
 
 .feature-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
 }
 
 .feature-box {
-  background-color: rgba(59, 130, 246, 0.1);
-  border-radius: 20px;
-  padding: 2rem;
-  transition: transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.feature-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-}
-
-.feature-emoji {
-  font-size: 3em;
-  display: block;
-  margin-bottom: 1rem;
-}
-
-.downloads-section {
-  padding: 4rem 2rem;
-  text-align: center;
   background-color: var(--background-color);
-}
-
-.downloads-counter p {
-  font-size: 1.2em;
-  margin-bottom: 10px;
-}
-
-.downloads-count-wrapper {
-  font-size: 2.5em;
-  color: var(--primary-color);
-  font-weight: bold;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .footer {
   background-color: var(--secondary-color);
   color: white;
-  padding: 2rem;
+  padding: 20px 0;
+  text-align: center;
 }
 
 .footer-content {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
+  padding: 0 20px;
 }
 
-.footer-logo, .footer-links, .footer-contact, .social-links {
-  flex: 1;
-  margin: 1rem;
-  min-width: 200px;
+.footer-logo {
+  margin-bottom: 20px;
 }
 
 .footer-logo-img {
   width: 100px;
 }
 
-.footer-links ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-links li {
-  margin-bottom: 0.5rem;
-}
-
-.footer-links a, .footer-contact p {
-  color: white;
-  text-decoration: none;
+.footer-links,
+.footer-contact,
+.social-links {
+  margin: 20px 0;
 }
 
 .social-links a {
-  margin-right: 15px;
-  font-size: 24px;
+  margin: 0 10px;
   color: white;
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
 
 .social-links a:hover {
-  color: var(--accent-color);
-}
-
-.social-links i {
-  vertical-align: middle;
+  color: #ffcc00; /* Cor ao passar o mouse */
 }
 
 .footer-bottom {
-  margin-top: 2rem;
-  text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 10px;
+  font-size: 0.8em;
 }
 
 .btn-donate {
-  background-color: var(--primary-color);
-  color: white;
+  background-color: #ffcc00;
+  color: #333;
   padding: 10px 20px;
-  border-radius: 50px;
+  border-radius: 5px;
   text-decoration: none;
-  font-size: 1em;
-  transition: background-color 0.3s, transform 0.3s;
+  margin-top: 10px;
   display: inline-block;
-  margin-top: 1rem;
 }
 
 .btn-donate:hover {
-  background-color: var(--accent-color);
-  transform: translateY(-2px);
+  background-color: #ffbb00; /* Alteração de cor ao passar o mouse */
 }
 
-@media (max-width: 768px) {
+/* Estilo responsivo */
+@media (max-width: 600px) {
   .navbar {
     flex-direction: column;
-  }
-
-  .logo-nav {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .nav-logo {
-    margin-bottom: 1rem;
+    align-items: flex-start;
   }
 
   .menu {
     flex-direction: column;
-    align-items: center;
+    margin: 10px 0;
   }
 
   .menu li {
-    margin: 0.5rem 0;
+    margin: 5px 0;
   }
 
   .buttons {
     flex-direction: column;
-    margin-top: 1rem;
   }
 
-  .theme-selector, .btn-language {
-    margin: 0.5rem 0;
-  }
-
-  .hero {
-    height: auto;
-    padding: 2rem 0;
-  }
-
-  .ametysta-container {
-    width: 95%;
-  }
-
-  .ametysta-info {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .download-section {
-    margin-bottom: 1rem;
-  }
-
-  .platform-indicator {
-    margin-top: 10px;
-  }
-
-  .app-info {
-    align-items: flex-start;
-    margin-top: 1rem;
-  }
-
-  .footer-content {
-    flex-direction: column;
-  }
-
-  .footer-logo, .footer-links, .footer-contact, .social-links {
-    text-align: center;
-    margin: 1rem 0;
+  .feature-grid {
+    grid-template-columns: 1fr; /* Um único bloco em dispositivos menores */
   }
 }
