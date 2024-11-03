@@ -108,12 +108,12 @@ body {
 
 .theme-selector:hover, .btn-language:hover {
   background-color: var(--secondary-color);
-  transform: translateY(-2px);
+  transform: scale(1.05);
 }
 
 .alert-box {
-  background-color: #ffcccb;
-  color: #d8000c;
+  background-color: #ffcc00;
+  color: #333;
   padding: 1rem;
   margin: 20px auto;
   border-radius: 5px;
@@ -142,6 +142,7 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Centralizar texto dentro da caixa */
 }
 
 .ametysta-info {
@@ -178,6 +179,7 @@ body {
 .features-section {
   padding: 50px 20px;
   background-color: #f9f9f9;
+  text-align: center; /* Centralizar conteúdo da seção */
 }
 
 .feature-grid {
@@ -191,7 +193,7 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  text-align: center; /* Centralizar texto dentro da caixa de recurso */
 }
 
 .footer {
