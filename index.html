@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurora</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="/images/AuroraLogo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+</head>
+<body class="theme-light">
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo-nav">
+                <img src="images/AuroraLogo.png" alt="Logo Aurora" class="nav-logo">
+                <div class="hamburger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="menu">
+                    <li><a href="#Inicio">⛪ Início</a></li>
+                    <li><a href="#SybillaIA" id="sybillaLink">✨ Sybilla IA</a></li>
+                    <li><a href="#Supporte">👥 Supporte</a></li>
+                </ul>
+            </div>
+            <div class="buttons">
+                <button id="themeToggle" class="theme-toggle" aria-label="Alternar tema">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <div id="sybillaAlert" class="alert-box">
+        A Sybilla está fora de serviço temporariamente
+    </div>
+
+    <main>
+        <section id="Inicio" class="hero">
+            <h2 class="section-header">Applicativos Sociaes</h2>
+            <div class="app-container">
+                <div class="app-box religious-app">
+                    <div class="app-content">
+                        <div class="app-info">
+                            <h2 class="app-title">Ametysta</h2>
+                            <p class="app-description">
+                                O seu applicativo catholico, explore oracções, 
+                                musicas feitas apenas para vós, baixe as
+                                suas musicas favoritas gratuitamente.
+                            </p>
+                            <div class="download-section">
+                                <a href="https://drive.google.com/file/d/1UTwa-l7rH7arzYc9axvssDfxz0Si8r41/view?usp=drivesdk" class="btn-download" data-app="ametysta" data-platform="android">
+                                    <i class="fab fa-android"></i> Android
+                                </a>
+                            </div>
+                        </div>
+                        <div class="app-preview">
+                            <div class="swiper product-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="images/ametystabanner.png" alt="Ametysta 1">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="images/ametystabannerapp.png" alt="Ametysta 2">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="images/ametystabannerapp2.png" alt="Ametysta 3">
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-header">Productividade</h2>
+            <div class="app-container">
+                <div class="app-box productivity-app">
+                    <div class="app-content">
+                        <div class="app-info">
+                            <h2 class="app-title">Aurora Calendar</h2>
+                            <p class="app-description">
+                                O seu melhor applicativo de calendario,
+                                explore todas as funcionalidades, traduza
+                                para qualquer idioma, e use para o seu
+                                dia a dia.
+                            </p>
+                            <div class="download-section">
+                                <a href="https://drive.google.com/file/d/1mLYXOoW1Sc4mY-ambpexRzlmkhR2iozt/view?usp=drivesdk" class="btn-download" data-app="auroracalendar" data-platform="android">
+                                    <i class="fab fa-android"></i> Android
+                                </a>
+                            </div>
+                        </div>
+                        <div class="app-preview">
+                            <div class="swiper product-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="images/auroracalendarbanner.png" alt="Aurora Calendar 1">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="images/auroracalendarpropbanner.png" alt="Aurora Calendar 2">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="images/auroracalendarpropbanner2.png" alt="Aurora Calendar 3">
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="app-box productivity-app">
+                    <div class="app-content">
+                        <div class="app-info">
+                            <h2 class="app-title">Aurora Typo</h2>
+                            <p class="app-description">
+                                O Typo é um edictor de texto,
+                                o melhor applicativo da aurora
+                                para creacção de documentos e
+                                textos.
+                            </p>
+                            <div class="download-section">
+                                <a href="https://drive.google.com/file/d/1mLFn5LLpmbl3GdAiMlZxHIxXnYyhE57J/view?usp=drivesdk" class="btn-download" data-app="auroratypo" data-platform="android">
+                                    <i class="fab fa-android"></i> Android
+                                </a>
+                                <a href="https://auroratypo.vercel.app/" class="btn-download" data-app="typo" data-platform="web">
+                                    <i class="fab fa-windows"></i> Web
+                                </a>
+                            </div>
+                        </div>
+                        <div class="app-preview">
+                            <div class="swiper product-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="images/AuroraTypoAppIcon.png" alt="Aurora Typo 1">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="images/auroratypoimage2.png" alt="Aurora Typo 2">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="images/auroratypoimage1.png" alt="Aurora Typo 3">
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="Supporte" class="footer">
+        <div class="footer-waves">
+            <div class="wave wave1"></div>
+            <div class="wave wave2"></div>
+            <div class="wave wave3"></div>
+        </div>
+        <div class="footer-content">
+            <div class="footer-main">
+                <div class="footer-logo">
+                    <img src="images/auroralogotext.png" alt="Logo Aurora" class="footer-logo-img">
+                    <p class="footer-slogan">As Technologias Portuguezas</p>
+                </div>
+                <div class="footer-nav">
+                    <div class="footer-nav-column">
+                        <h3>Empresa</h3>
+                        <ul>
+                            <li><a href="#Sobre">Em Breve</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-column">
+                        <h3>Productos</h3>
+                        <ul>
+                            <li><a href="#Inicio">Ametysta</a></li>
+                            <li><a href="#Inicio">Aurora Calendar</a></li>
+                            <li><a href="#Inicio">Aurora Typo</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-column">
+                        <h3>Supporte</h3>
+                        <ul>
+                            <li><a href="https://docs.google.com/document/d/19ERqPmUvcVL46HBFZmaLKFIbshzyRYVw7897SI7URBM/edit?usp=drivesdk">Uso</a></li>
+                            <li><a href="https://docs.google.com/document/d/1FY-SPMqcH3_6Oti2IFydhNsCya7m3UPaSHXKauvGWTM/edit?usp=drivesdk">Privacidade</a></li>
+                            <li><a href="https://docs.google.com/document/d/15Yz_ZYtQVjjzMeLX2BNgMZboUtiq12rPhNtVkUmdkCE/edit?usp=drivesdk">Termos de Serviço</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-social">
+                <h3>Redes Sociaes</h3>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/aurora_studio_pt" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/share/19gMMku3Y6/" aria-label="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Aurora</p>
+                <div class="footer-bottom-links">
+                    <a href="https://docs.google.com/document/d/1FY-SPMqcH3_6Oti2IFydhNsCya7m3UPaSHXKauvGWTM/edit?usp=drivesdk">Política de Privacidade</a>
+                    <a href="https://docs.google.com/document/d/15Yz_ZYtQVjjzMeLX2BNgMZboUtiq12rPhNtVkUmdkCE/edit?usp=drivesdk">Termos de Serviço</a>
+                    <a href="https://docs.google.com/document/d/19ERqPmUvcVL46HBFZmaLKFIbshzyRYVw7897SI7URBM/edit?usp=drivesdk">Termos de Uso</a>
+                    <a href="https://ko-fi.com/simaoaraujo" target="_blank" class="btn-donate">
+                        <i class="fas fa-heart"></i> Doar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
